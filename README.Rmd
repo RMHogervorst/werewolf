@@ -7,10 +7,77 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# description
+# Description of dataset creation
 
 I needed a dataset with many interesting features, but mostly where I can 
 probabilistically assign people to three categories.
 
 The people in this dataset can be divided into three categories.
 They are either normal, werewolf, or wererabbit.
+All 'normal' measures such as haircolor, BMI, eye_color, etnicity, BFI values, 
+blood-types, favorite food and allergies match the global values of the USA, 
+Age is a random birthday sample. The names come from the babynames package and
+are selected from the years between 1960 and 1993. 
+So the general values will be equal to the US population. However I only
+adjusted the hair and eye values for race, other things are not conditional.
+
+## Alleged source of the sample 
+Sunnyville was an unfortunate and freak village. Something happened there. It might
+have been the radioactive dump nearby, or the spiderfarm on the other side
+of the village. Or perhaps the experiments 50 years ago had played a role.
+
+No one knows what exactly happened, but something had changed the villagers. 
+They were normal on most days, but in the night you had better not be outside.
+It is a wild place, howling in the night. 
+
+There were sightings of large dogs, wolfs maybe. And ... rabits, also very large
+but mostly fluffy. 
+
+Anyway...
+
+## The research
+After a generous donation from the 'astrology-fund-for-research-that-is-really-good'
+a team of scientists from the university of south-nordistan
+decided to investigate the village and, since they are social
+scientist, they decide to measure everything they can measure. It is the day and age of
+'quite large'-data they say. The villagers are willing and in the next few weeks
+they all patiently undergo the questions and measurements. 
+After 2 exciting weeks the scientist return home with their measurements 
+(minus one scientist who could no longer be found). 
+
+Unfortunately the funding was not enough to do all the analyses on the dataset. 
+Although very eager, the researchers were not very reproducible in their work.
+We do not know much about the variables. Their publication was never accepted
+and most of the research staff went to other jobs in industry. One undergraduate
+student put the dataset online as an exercise to learn github. An exercise
+he appantly abandoned, because he is no longer reachable.
+
+### Outcomes
+There is a prediction score for three outcomes werewolf, wererabit, normal
+
+### Predictors
+Many variables were recorded.
+
+* dates: date of birth
+* weekday: day of the week of the birth
+* age:  whole age at time of recording
+* moonphase: moonphase at time of birth 
+* BMI: Body mass index 
+* sex: male or female
+* favorite_food: one of 50
+* allergies : food allergies
+* etnicity: one of white, black or hispanic
+* hair color
+* eye color
+Big five inventory subscales range 0-10 
+* BFI_O: openness to experience
+* BFI_C: Conscienciousness
+* BFI_E: Extraversion
+* BFI_A: Agreeableness
+* BFI_N: Neuroticism / stability
+
+* scratch
+* itch
+* first name
+* coin flip: a measure of luck. 
+* blood type
