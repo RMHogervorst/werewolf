@@ -1,0 +1,16 @@
+---
+title: "README"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# description
+
+I needed a dataset with many interesting features, but mostly where I can 
+probabilistically assign people to three categories.
+
+The people in this dataset can be divided into three categories.
+They are either normal, werewolf, or wererabbit.
