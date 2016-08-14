@@ -1,5 +1,5 @@
 ---
-title: "README"
+title: "The werewolf dataset"
 output: github_document
 ---
 
@@ -7,7 +7,10 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Description of dataset creation
+[![Licence](https://img.shields.io/badge/licence-cc0-lightgrey.svg)](http://choosealicense.com/)
+"[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)"
+
+## Description of dataset creation
 
 I needed a dataset with many interesting features, but mostly where I can 
 probabilistically assign people to three categories.
@@ -85,3 +88,13 @@ Big five inventory subscales range 0-10
 * first name
 * coin flip: a measure of luck. 
 * blood type
+
+
+### Licence
+
+This is a CC0 copyright dataset. In other words: you can do with it how you 
+please, but don't hold me responsible.
+
+### Contact
+Want to help or have questions?  
+Contact me directly, use an [issue](https://github.com/RMHogervorst/werewolf/issues), fork me or submit a pull request.
