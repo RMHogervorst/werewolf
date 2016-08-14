@@ -24,16 +24,20 @@ adjusted the hair and eye values for race, other things are not conditional.
 ## Alleged source of the sample 
 Sunnyville was an unfortunate and freak village. Something happened there. It might
 have been the radioactive dump nearby, or the spiderfarm on the other side
-of the village. Or perhaps the experiments 50 years ago had played a role.
+of the village. Or perhaps the experiments 50 years ago had played the  vital role.
 
 No one knows what exactly happened, but something had changed the villagers. 
 They were normal on most days, but in the night you had better not be outside.
 It is a wild place, howling in the night. 
 
-There were sightings of large dogs, wolfs maybe. And ... rabits, also very large
+There were sightings of large dogs, wolves maybe. And ... rabits, also very large
 but mostly fluffy. 
 
 Anyway...
+
+Other theories suggest that in an evolutionary race the existence 
+of werewolves should create a pressure and void that must be filled up to balance 
+nature. Thereby creating a healthy counterpart to wolves, namely rabbits.^[Though these people have no formal biology background and have often seen twilight movies.]
 
 ## The research
 After a generous donation from the 'astrology-fund-for-research-that-is-really-good'
