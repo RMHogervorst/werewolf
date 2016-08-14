@@ -14,8 +14,8 @@ probabilistically assign people to three categories.
 
 The people in this dataset can be divided into three categories.
 They are either normal, werewolf, or wererabbit.
-All 'normal' measures such as haircolor, BMI, eye_color, etnicity, BFI values, 
-blood-types, favorite food and allergies match the global values of the USA, 
+All 'normal' measures such as haircolor, BMI, eye color, etnicity, BFI values, 
+blood types, favorite food and allergies match the global values of the USA, 
 Age is a random birthday sample. The names come from the babynames package and
 are selected from the years between 1960 and 1993. 
 So the general values will be equal to the US population. However I only
@@ -24,13 +24,13 @@ adjusted the hair and eye values for race, other things are not conditional.
 ## Alleged source of the sample 
 Sunnyville was an unfortunate and freak village. Something happened there. It might
 have been the radioactive dump nearby, or the spiderfarm on the other side
-of the village. Or perhaps the experiments 50 years ago had played the  vital role.
+of the village. Or perhaps the experiments 50 years ago had played the vital role.
 
 No one knows what exactly happened, but something had changed the villagers. 
-They were normal on most days, but in the night you had better not be outside.
+They were normal on most days, but in the night you would better not be outside.
 It is a wild place, howling in the night. 
 
-There were sightings of large dogs, wolves maybe. And ... rabits, also very large
+There were sightings of large dogs, wolves maybe. And ... rabbits, also very large
 but mostly fluffy. 
 
 Anyway...
