@@ -50,18 +50,34 @@ werepeople$first_name <- ifelse(werepeople$sex == "female",
                                 sample(male_names, N_people))
 
 werepeople$type <- ifelse(werepeople$moonphase == "Full", "werewolf", NA)
-
-werepeople$value1 <- werepeople$BMI *as.numeric(werepeople$weekday) - as.numeric(werepeople$moonphase)
-werepeople$value2 <- werepeople$BFI_N *werepeople$BFI_O**werepeople$value3
-werepeople$value3 <- rnorm(N_people)
-werepeople$value4 <- werepeople$value1+werepeople$value2+werepeople$value3
-werepeople$type[werepeople$value3 <0] <- as.factor(ifelse(werepeople$value4 >=100, "normal",
-                           ifelse(werepeople$value3 >0.3, "werewolf", "wererabbit")))
-werepeople$typewerepeople$type[werepeople$value3 >=0] <- sample(c("normal", "werewolf", "wererabbit"),
-                                                                size = length(werepeople$typewerepeople$type[werepeople$value3 >=0]),
-                                                                replace = TRUE,prob = c(2,1,1))
+# 
+# werepeople$value1 <- werepeople$BMI *as.numeric(werepeople$weekday) - as.numeric(werepeople$moonphase)
+# werepeople$value2 <- werepeople$BFI_N *werepeople$BFI_O**werepeople$value3
+# werepeople$value3 <- rnorm(N_people)
+# werepeople$value4 <- werepeople$value1+werepeople$value2+werepeople$value3
+# werepeople$type[werepeople$value3 <0] <- as.factor(ifelse(werepeople$value4 >=100, "normal",
+#                            ifelse(werepeople$value3 >0.3, "werewolf", "wererabbit")))
+# werepeople$typewerepeople$type[werepeople$value3 >=0] <- sample(c("normal", "werewolf", "wererabbit"),
+#                                                                 size = length(werepeople$typewerepeople$type[werepeople$value3 >=0]),
+#                                                                 replace = TRUE,prob = c(2,1,1))
+werepeople$type <- NA
 # if favorite food is Bacon or Steak and moon is full during birth werewolf
+werepeople$type[(werepeople$favorite_food == "Bacon"| werepeople$favorite_food == "Steak") & werepeople$moonphase =="Full"] <- "werewolf"
 # if favorite food is blueberries, apples, banana, sweetcorn and age <30 wererabbit
+werepeople$type[(werepeople$favorite_food %in% c("Blueberries", "Apples", "Banana", "Sweetcorn")) & werepeople$age <30] <- "wererabbit"
+# if BMI <20 favorite food is Peanut butter/Popcorn wererabbit
+werepeople$type[werepeople$BMI <20 & werepeople$favorite_food %in% c("Peanut Butter", "Popcorn")] <- "wererabbit"
+# if favorite food is watermelon normal
+werepeople$type[werepeople$favorite_food == "Watermelon"] <- "normal"
+# brown eyes and brown hair and blood type A- or B- werewolf
+werepeople$type[werepeople$haircolor == "brown" & werepeople$eye_color =="brown" & werepeople$blood_type %in% c("A-","B-")] <- "werewolf"
+# if born on sunday and nchar first name 8 > normal
+werepeople$type[werepeople$weekday == "Sun" & nchar(werepeople$first_name)>7] <- "normal"
+werepeople$type[is.na(werepeople$type) & werepeople$BFI_E <2] <- "normal"
+werepeople$type[is.na(werepeople$type) & werepeople$BFI_O <3] <- "wererabbit"
+werepeople$type[is.na(werepeople$type) & werepeople$BFI_A >4] <- "werewolf"
+werepeople$type[is.na(werepeople$type)] <- "normal"
+table(werepeople$type)
 #################creation of probabilities.
 #vglm(formec.domainTOTAALn, family=multinomial(refLevel=2), data=datac1domecTOTAAL)
 #formulaprediction <- type~moonphase+weekday+ age + scratch + allergies + eye_color +sex +blood_type
@@ -86,5 +102,5 @@ wolfies <- cbind(normal,wererabbit, werewolf)
 # cbind(werepeople,wolfies) %>% select(type,normal, wererabbit) %>% 
 #     View
 
-werepeople_dataset <- cbind(werepeople,wolfies) %>% select(-type, -value4, value1,value2, value3)
+werepeople_dataset <- cbind(werepeople,wolfies) %>% select(-type)
 saveRDS(werepeople_dataset, "data/werepeople.RDS")
