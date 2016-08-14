@@ -1,7 +1,7 @@
 The werewolf dataset
 ================
 
-[![Licence](https://img.shields.io/badge/licence-cc0-lightgrey.svg)](http://choosealicense.com/) "[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)"
+[![Licence](https://img.shields.io/badge/licence-cc0-lightgrey.svg)](http://choosealicense.com/) [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 Description of dataset creation
 -------------------------------
