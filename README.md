@@ -3,6 +3,13 @@ The werewolf dataset
 
 [![Licence](https://img.shields.io/badge/licence-cc0-lightgrey.svg)](http://choosealicense.com/) [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
+To download the csv-file, download from <https://cdn.rawgit.com/RMHogervorst/werewolf/f93f48f0/data/werepeople.csv>
+To download the RDS-file (R-file), download from <https://cdn.rawgit.com/RMHogervorst/werewolf/f93f48f0/data/werepeople.RDS>
+To download the featherfile, use <https://cdn.rawgit.com/RMHogervorst/werewolf/f93f48f0/data/werepeople.feather>
+
+
+
+
 Description of dataset creation
 -------------------------------
 
